@@ -3,5 +3,7 @@
 
 export default function Favourites(){
 
-    return <div>Favourites</div>
+    return <div>Favourites
+        Pizza
+    </div>
 }
