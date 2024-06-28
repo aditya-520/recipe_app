@@ -5,6 +5,7 @@ export default function Favourites(){
         Pizza
         Pasta
         Rice
-        
+        Burger
+        hihi
     </div>
 }
