@@ -1,0 +1,70 @@
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #000000, #434343);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Style the logo */
+  .navbar-logo img {
+    height: 50px;
+    transition: transform 0.3s;
+  }
+  
+  .navbar-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Center the search bar */
+  .navbar-search-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-search input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .navbar-search input:focus {
+    width: 400px;
+  }
+  
+  /* Style the options */
+  .navbar-options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-options a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-options a:hover {
+    color: #ffdd57;
+    transform: translateY(-2px);
+  }
+  
