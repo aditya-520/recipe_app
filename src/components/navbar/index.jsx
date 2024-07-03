@@ -3,6 +3,7 @@ import { GlobalContext } from '../../context';
 import './navbar.css';
 
 const Navbar = () => {
+
     const { searchParam, setSearchParam, handleSubmit } = useContext(GlobalContext);
     console.log(searchParam);
 
@@ -20,6 +21,7 @@ const Navbar = () => {
                         placeholder="Search..." 
                     />
                 </form>
+
             </div>
             <div className="navbar-options">
                 <a href="#option1">Option 1</a>

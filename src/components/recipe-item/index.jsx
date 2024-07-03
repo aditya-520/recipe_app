@@ -9,5 +9,6 @@ export default function RecipeItem({item})
                 <img src = {item?.image_url} alt="recipe item" className="imageblock" />
             </div>
         </div>
+
     )
 }
