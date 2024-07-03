@@ -4,9 +4,7 @@ import './navbar.css';
 
 const Navbar = () => {
 
-    const { searchParam, setSearchParam, handleSubmit } = useContext(GlobalContext)
-
-    const { searchParam, setSearchParam } = useContext(GlobalContext)
+    const { searchParam, setSearchParam, handleSubmit } = useContext(GlobalContext);
     console.log(searchParam);
 
     return (
@@ -16,27 +14,18 @@ const Navbar = () => {
             </div>
             <div className="navbar-search">
                 <form onSubmit={handleSubmit}> 
-                    <input type="text"
+                    <input 
+                        type="text"
                         value={searchParam}
                         onChange={(event) => setSearchParam(event.target.value)}
-                        placeholder="Search..." />
+                        placeholder="Search..." 
+                    />
                 </form>
 
             </div>
             <div className="navbar-options">
                 <a href="#option1">Option 1</a>
                 <a href="#option2">Option 2</a>
-
-            </div>
-                <input type="text" 
-                value={searchParam}
-                onChange={(event)=> setSearchParam(event.target.value)}
-                placeholder="Search..." />
-            </div>
-            <div className="navbar-options">
-                <a href="#option1">Option 1</a>
-                <a href="#option2">Option 2</a>
-
             </div>
         </nav>
     );
