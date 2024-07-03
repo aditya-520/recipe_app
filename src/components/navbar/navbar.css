@@ -45,9 +45,6 @@ body, html {
     transition: width 0.4s ease-in-out;
   }
   
-  .navbar-search input:focus {
-    width: 400px;
-  }
   
   /* Style the options */
   .navbar-options {
