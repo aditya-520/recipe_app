@@ -24,7 +24,7 @@ function App() {
           }
         />
         <Route
-          path='/item/:id'
+          path='/recipe-item/:id'
           element={
             <Details />
           }
