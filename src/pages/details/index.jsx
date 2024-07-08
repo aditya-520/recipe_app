@@ -1,16 +1,11 @@
 import { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { GlobalContext } from "../../context";
-
-
+import './details.css';
 
 export default function Details() {
-
     const { id } = useParams();
-    const {
-        recipeDetailsData,
-        setRecipeDetailsData,
-    } = useContext(GlobalContext);
+    const { recipeDetailsData, setRecipeDetailsData } = useContext(GlobalContext);
 
     useEffect(() => {
         async function getRecipeDetails() {
@@ -21,27 +16,28 @@ export default function Details() {
 
             console.log(data);
             if (data?.data) {
-                setRecipeDetailsData(data?.data);
+                setRecipeDetailsData(data?.data.recipe);
             }
         }
 
         getRecipeDetails();
-    }, []);
+    }, [id, setRecipeDetailsData]);
 
     console.log(recipeDetailsData, "recipeDetailsData");
 
-    return <div className="xyzz">
-        <div className="xyzz2">
-            <div className="xyzz3">
+    return (
+        <div className="details-container">
+            <div className="image-container">
                 <img
-                    src={recipeDetailsData?.recipe?.image_url}
-                    className="imgxyz"
+                    src={recipeDetailsData?.image_url}
+                    alt={recipeDetailsData?.title}
+                    className="recipe-image"
                 />
             </div>
+            <div className="details-content">
+                <span className="publisher">{recipeDetailsData?.publisher}</span>
+                <h3 className="recipe-title">{recipeDetailsData?.title}</h3>
+            </div>
         </div>
-        <div className="xyzz4">
-            <span className="text1">{recipeDetailsData?.recipe?.publisher} </span>
-            <h3 classname="item-title">{recipeDetailsData?.recipe?.title}</h3>
-        </div>
-    </div>
+    );
 }
