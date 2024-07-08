@@ -30,5 +30,18 @@ export default function Details() {
 
     console.log(recipeDetailsData, "recipeDetailsData");
 
-    return <div>Details</div>
+    return <div className="xyzz">
+        <div className="xyzz2">
+            <div className="xyzz3">
+                <img
+                    src={recipeDetailsData?.recipe?.image_url}
+                    className="imgxyz"
+                />
+            </div>
+        </div>
+        <div className="xyzz4">
+            <span className="text1">{recipeDetailsData?.recipe?.publisher} </span>
+            <h3 classname="item-title">{recipeDetailsData?.recipe?.title}</h3>
+        </div>
+    </div>
 }
