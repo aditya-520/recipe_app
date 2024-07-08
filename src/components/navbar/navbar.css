@@ -88,9 +88,11 @@ body, html {
       margin-top: 10px; /* Space between search and options */
   }
 
+
   .navbar-search {
       max-width: none; /* Allow input to expand full width */
   }
+
 
   .navbar-options {
       justify-content: center; /* Center align options */
