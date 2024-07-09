@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <div className="recipe-list">
             {recipeList && recipeList.length > 0 ? (
-                recipeList.map((item, index) => <RecipeItem key={index} item={item} />)
+                recipeList.map((item, index) => <RecipeItem item={item} />)
             ) : (
                 <div className="no-search">Nothing to show</div>
             )}

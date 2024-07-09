@@ -24,8 +24,8 @@ const Navbar = () => {
 
             </div>
             <div className="navbar-options">
-                <a href="#option1">Option 1</a>
-                <a href="#option2">Option 2</a>
+                <a href="/">Home</a>
+                <a href="/favourties">Favourites</a>
             </div>
         </nav>
     );
