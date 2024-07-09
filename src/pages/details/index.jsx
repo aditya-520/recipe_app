@@ -37,6 +37,24 @@ export default function Details() {
             <div className="details-content">
                 <span className="publisher">{recipeDetailsData?.publisher}</span>
                 <h3 className="recipe-title">{recipeDetailsData?.title}</h3>
+                <div>
+                    <button className="favbutton">Save as Favourites</button>
+                </div>
+                <div>
+                    <span className="ingredients">Ingredients:</span>
+                    <ul className="abc">
+                        {recipeDetailsData?.recipe?.ingredients.map((ingredient) => (
+                            <li>
+                                <span className="abcd1">
+                                    {ingredient.quantity} {ingredient.unit}
+                                </span>
+                                <span className="abcd1">
+                                    {ingredient.description}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );
