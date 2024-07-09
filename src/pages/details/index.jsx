@@ -16,7 +16,7 @@ export default function Details() {
 
             console.log(data);
             if (data?.data) {
-                setRecipeDetailsData(data?.data.recipe);
+                setRecipeDetailsData(data.data.recipe);
             }
         }
 
@@ -37,18 +37,19 @@ export default function Details() {
             <div className="details-content">
                 <span className="publisher">{recipeDetailsData?.publisher}</span>
                 <h3 className="recipe-title">{recipeDetailsData?.title}</h3>
-                <div>
-                    <button className="favbutton">Save as Favourites</button>
-                </div>
-                <div>
-                    <span className="ingredients">Ingredients:</span>
-                    <ul className="abc">
-                        {recipeDetailsData?.recipe?.ingredients.map((ingredient) => (
-                            <li>
-                                <span className="abcd1">
-                                    {ingredient.quantity} {ingredient.unit}
+                <button className="favbutton">Save as Favourites</button>
+                <div className="ingredients-section">
+                    <span className="ingredients-title">Ingredients:</span>
+                    <ul className="ingredients-list">
+                        {recipeDetailsData?.ingredients.map((ingredient, index) => (
+                            <li key={index} className="ingredient-item">
+                                <span className="ingredient-quantity">
+                                    {ingredient.quantity || ''}
                                 </span>
-                                <span className="abcd1">
+                                <span className="ingredient-unit">
+                                    {ingredient.unit || ''}
+                                </span>
+                                <span className="ingredient-description">
                                     {ingredient.description}
                                 </span>
                             </li>
