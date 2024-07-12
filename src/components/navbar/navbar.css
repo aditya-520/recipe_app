@@ -33,6 +33,7 @@ body, html {
   flex: 1; /* Expand to take remaining space */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-search {
@@ -49,8 +50,8 @@ body, html {
   outline: none;
   font-size: 16px;
   transition: width 0.4s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Style the options */
 .navbar-options {
@@ -88,11 +89,9 @@ body, html {
       margin-top: 10px; /* Space between search and options */
   }
 
-
   .navbar-search {
       max-width: none; /* Allow input to expand full width */
   }
-
 
   .navbar-options {
       justify-content: center; /* Center align options */

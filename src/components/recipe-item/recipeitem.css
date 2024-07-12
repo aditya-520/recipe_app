@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .recipe-item {
     position: relative;
     display: flex;
@@ -9,8 +15,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    width: 250px; 
-    height: 350px; 
+    width: 250px;
+    height: 350px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -20,7 +26,7 @@
 }
 
 .image-container {
-    height: 70%; 
+    height: 70%;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
 }
@@ -28,7 +34,7 @@
 .image-block {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
 
@@ -36,27 +42,36 @@
     padding: 15px;
 }
 
-.recipe-title {
+.item-pub {
+    font-size: 0.9em;
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Merriweather', serif;
+}
+
+.item-name {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+    font-family: 'Merriweather', serif;
 }
 
-.recipe-description {
-    font-size: 0.9em;
-    color: #666;
-    line-height: 1.4;
-    height: 60px; /* Limit the height of the description */
-    overflow: hidden;
-}
-
-.recipe-details a {
+.recipe-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recipe-details a:hover {
-    text-decoration: underline;
+.recipe-button:hover {
+    background-color: #343f4c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
